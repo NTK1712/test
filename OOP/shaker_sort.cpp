@@ -11,18 +11,24 @@ void Sort::ShakerSort()
 		{
 			if (A[i] > A[i + 1])
 			{
+				request();
 				swap(A[i], A[i + 1]);
+				output();
 				k = i;
 			}
+
 		}
 		Right = k;
 		for (int i = Right; i > Left; i--)
 		{
 			if (A[i] < A[i - 1])
-			{
+			{			
+				request();
 				swap(A[i], A[i - 1]);
+				output();
 				k = i;
 			}
+
 		}
 		Left = k;
 	}
@@ -39,16 +45,21 @@ void Sort::ShakerSortDE()
 		{
 			if (A[i] < A[i + 1])
 			{
+				request();
 				swap(A[i], A[i + 1]);
+				output();
 				k = i;
 			}
+
 		}
 		Right = k;
 		for (int i = Right; i > Left; i--)
 		{
 			if (A[i] > A[i - 1])
 			{
+				request();
 				swap(A[i], A[i - 1]);
+				output();
 				k = i;
 			}
 		}

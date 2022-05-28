@@ -6,7 +6,7 @@ void Sort::heapify(int n, int i)
     int largest = i;
     int l = 2 * i + 1;
     int r = 2 * i + 2;
-
+    request();
     if (l < n && A[l] > A[largest]) largest = l;
     if (r < n && A[r] > A[largest]) largest = r;
     if (largest != i)
@@ -37,7 +37,7 @@ void Sort::heapifyDE(int n, int i)
     int largest = i;
     int l = 2 * i + 1;
     int r = 2 * i + 2;
-
+    request();
     if (l < n && A[l] < A[largest]) largest = l;
     if (r < n && A[r] < A[largest]) largest = r;
     if (largest != i)
@@ -58,7 +58,6 @@ void Sort::HeapSortDE()
         swap(A[0], A[i]);
         output();
         heapifyDE(i, 0);
-
     }
 }
 

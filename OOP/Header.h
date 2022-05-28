@@ -33,9 +33,7 @@ public:
 	void InsertionSortDE();
 	void Insertion_Sort();
 	//4
-	int binarySearch(int , int , int);
 	void BinaryInsertionSort();
-	int binarySearchDE(int, int, int);
 	void BinaryInsertionSortDE();
 	void BinaryInsertion_Sort();
 	//5
@@ -47,13 +45,20 @@ public:
 	void ShakerSortDE();
 	void Shaker_Sort();
 	//7
-
+	void ShellSort();
+	void ShellSortDE();
+	void Shell_Sort();
 	//8
-	/*void CountingSort(int A[], int n);
-	void CountingSort(int A[], int n, int div);
+	void CountingSort();
+	void CountingSortDE();
+	void Counting_Sort();
+
 	//9
-	int getMax(int A[], int n);//lấy giá trị lớn nhất trong mảng
-	void RadixSort(int A[], int n);*/
+	void CountingSort(int);
+	void CountingSortDE(int);
+	void RadixSort();
+	void RadixSortDE();
+	void Radix_Sort();
 	//10
 	void heapify(int, int);
 	void HeapSort();
@@ -61,32 +66,35 @@ public:
 	void HeapSortDE();
 	void Heap_Sort();
 	//11
-	int partition(int low, int high);
-	void QuickSort();
+	int partition(int , int);
+	void QuickSort(int, int);
+	int partitionDE(int , int);
+	void QuickSortDE(int, int);
+	void Quick_Sort();
 	//12
-	void Merge(int left, int mid, int right);
-	void MergeS(int left, int right);
-	void MergeSort();
+	void MergeS(int, int, int);
+	void MergeSort(int,int,int);
+	void MergeSortDE(int, int, int);
+	void Merge_Sort();
 
 
+	int getMax();//trả về giá trị max trong mảng
 
 	void input_manual();//nhập trực tiếp từng số
 	void input_random();//nhập ngẫu nhiên 
 	void input_from_file();//nhập qua file
 	void input();
 
-	void chose();
-	void menu();
-	int getMax();//trả về giá trị max trong mảng
 	void output();
 	void outputFast();
 	void outputNormal();
 	void outputSlow();
 
+	void start();
 	void request();
 
-	void start();
-
+	void chose();
+	void menu();
 };
 
 

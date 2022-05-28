@@ -19,7 +19,8 @@ Sort::~Sort()
 }
 
 
-int Sort::getMax() {
+int Sort::getMax() 
+{
 	int max = A[0];
 	for (int i = 0; i < amount; i++) {
 		if (A[i] > max)
@@ -254,13 +255,22 @@ void Sort::chose()
 			Shaker_Sort();
 			break;
 		case 7:
+			Shell_Sort();
+			break;
 		case 8:
+			Counting_Sort();
+			break;
 		case 9:
+			Radix_Sort();
+			break;
 		case 10:
 			Heap_Sort();
 			break;
 		case 11:
+			Quick_Sort();
+			break;
 		case 12:
+			Merge_Sort();
 			break;
 		case 14:
 			menu();

@@ -1,71 +1,45 @@
-#include"Header.h"
-
-int Sort::binarySearch(int item, int low, int high)
-{
-    if (high <= low)
-        return (item > A[low]) ? (low + 1) : low;
-
-    int mid = (low + high) / 2;
-
-    if (item == A[mid])
-        return mid + 1;
-
-    if (item > A[mid])
-        return binarySearch( item, mid + 1, high);
-    return binarySearch( item, low, mid - 1);
-}
+﻿#include"Header.h"
 
 void Sort::BinaryInsertionSort()
 {
-    int i, loc, j, selected;
-
-    for (i = 1; i < amount; ++i)
+    int l, r, m;
+    int x;
+    for (int i = 1; i < amount; i++)
     {
-        j = i - 1;
-        selected = A[i];
-
-        loc = binarySearch( selected, 0, j);
-
-        while (j >= loc)
+        x = A[i]; l = 0;
+        r = i - 1;
+        while (l <= r)
         {
-            A[j + 1] = A[j];
-            j--;
+            request();
+            m = (l + r) / 2;
+            if (x < A[m]) r = m - 1;
+            else l = m + 1;
         }
-        A[j + 1] = selected;
+        for (int j = i - 1; j >= l; j--)
+            A[j + 1] = A[j];
+        A[l] = x;
         output();
     }
 }
-int Sort::binarySearchDE(int item, int low, int high)
-{
-    if (high > low)
-        return (item > A[low]) ? (low + 1) : low;
 
-    int mid = (low + high) / 2;
-
-    if (item == A[mid])
-        return mid + 1;
-
-    if (item <= A[mid])
-        return binarySearchDE(item, mid + 1, high);
-    return binarySearchDE(item, low, mid - 1);
-}
 void Sort::BinaryInsertionSortDE()
 {
-    int i, loc, j, selected;
-
-    for (i = 1; i < amount; ++i)
+    int l, r, m;
+    int x;
+    for (int i = 1; i < amount; i++)
     {
-        j = i - 1;
-        selected = A[i];
-
-        loc = binarySearchDE(selected, 0, j);
-
-        while (j >= loc)
+        x = A[i]; l = 0;
+        r = i - 1;
+        while (l <= r)  
         {
-            A[j + 1] = A[j];
-            j--;
+            request();
+            m = (l + r) / 2;
+            if (x > A[m]) r = m - 1;
+            else l = m + 1;
         }
-        A[j + 1] = selected;
+        for (int j = i - 1; j >= l; j--)
+            A[j + 1] = A[j];
+        A[l] = x;
         output();
     }
 }
@@ -80,11 +54,15 @@ void Sort::BinaryInsertion_Sort()
         switch (ch)
         {
         case 1:
+            system("cls");
+            start();
             BinaryInsertionSort();
             cout << endl << "Bam enter de quay lai\n";
             system("pause");
             break;
         case 2:
+            system("cls");
+            start();
             BinaryInsertionSortDE();
             cout << endl << "Bam enter de quay lai\n";
             system("pause");
