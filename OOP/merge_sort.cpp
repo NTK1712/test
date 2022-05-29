@@ -17,11 +17,16 @@ void Sort::MergeSort(int left, int mid, int right)
         else
             A[current++] = RightArr[j++];
     while (i < n1)
+    {
         request();
         A[current++] = LeftArr[i++];
+    }
+
     while (j < n2)
+    {
         request();
         A[current++] = RightArr[j++];
+    }
 }
 void Sort::MergeSortDE(int left, int mid, int right)
 {
@@ -40,11 +45,17 @@ void Sort::MergeSortDE(int left, int mid, int right)
         else
             A[current++] = RightArr[j++];
     while (i < n1)
+    {
         request();
         A[current++] = LeftArr[i++];
+    }
+
     while (j < n2)
+    {
         request();
         A[current++] = RightArr[j++];
+    }
+
 }
 
 void Sort::MergeS(int left, int right, int ch)
@@ -52,10 +63,10 @@ void Sort::MergeS(int left, int right, int ch)
     if (left >= right)
         return;
     int mid = left + (right - left) / 2;
-    MergeS( left, mid, ch);
-    MergeS( mid + 1, right, ch);
+    MergeS(left, mid, ch);
+    MergeS(mid + 1, right, ch);
     if (ch == 1)
-        MergeSort( left, mid, right);
+        MergeSort(left, mid, right);
     else MergeSortDE(left, mid, right);
     output();
 }
@@ -66,21 +77,21 @@ void Sort::Merge_Sort()
     do
     {
         system("cls");
-        cout << "\n1.Sap xep tang dan\n2.Sap xep giam dan\n3.Quay lai!\n4.Quay lai menu!\n";
+        cout << "Chon cach sap xep\n1.Sap xep tang dan\n2.Sap xep giam dan\n3.Quay lai!\n4.Quay lai menu!\n";
         cin >> ch;
         switch (ch)
         {
         case 1:
             system("cls");
             start();
-            MergeS( 0, amount - 1, ch);
+            MergeS(0, amount - 1, ch);
             cout << endl << "Bam enter de quay lai\n";
             system("pause");
             break;
         case 2:
             system("cls");
             start();
-            MergeS( 0, amount - 1, ch);
+            MergeS(0, amount - 1, ch);
             cout << endl << "Bam enter de quay lai\n";
             system("pause");
             break;

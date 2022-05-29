@@ -18,12 +18,18 @@ void Sort::InterChangeSort()
 void Sort::InterChangeSortDE()
 {
     for (int i = 0; i < amount - 1; i++)
+    {
         for (int j = i + 1; j < amount; j++)
+        {
             if (A[i] < A[j])
             {
                 swap(A[i], A[j]);
                 output();
-            }
+            }       
+            request();
+        }
+
+    }    
 }
 void Sort::InterChange_Sort()
 {
@@ -31,7 +37,7 @@ void Sort::InterChange_Sort()
     do
     {    
         system("cls");
-        cout << "\n1.Sap xep tang dan\n2.Sap xep giam dan\n3.Quay lai!\n4.Quay lai menu!\n";
+        cout << "Chon cach sap xep\n1.Sap xep tang dan\n2.Sap xep giam dan\n3.Quay lai!\n4.Quay lai menu!\n";
         cin >> ch;
         switch (ch)
         {

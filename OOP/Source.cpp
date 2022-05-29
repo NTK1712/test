@@ -39,7 +39,6 @@ void Sort::input_manual()
 	{
 		cout << "A[" << i << "]= ";
 		cin >> A[i];
-		//arrCount++;
 	}
 	cout << "Day da nhap: ";
 	for (int i = 0; i < amount; i++) {
@@ -57,7 +56,6 @@ void Sort::input_random()
 	for (int i = 0; i < amount; i++)
 	{
 		A[i] = rand() % 1000 + 0;
-		//arrCount++;
 	}
 	cout << "Mang da nhap: ";
 	for (int i = 0; i < amount; i++) {
@@ -102,7 +100,7 @@ void Sort::input()
 	do
 	{
 		system("cls");
-		cout << "\n1.Nhap truc tiep tung phan tu\n2.Nhap ngau nhien\n3.Nhap qua file\n";
+		cout << "Chon cach khoi tao day so:\n1.Nhap truc tiep tung phan tu\n2.Nhap ngau nhien\n3.Nhap qua file\n";
 		cin >> ch;
 		switch (ch)
 		{
@@ -225,13 +223,13 @@ void Sort::chose()
 	int ch = 0;
 	do {
 		system("cls");
-		cout << "Chon toc do thuc hien thuat toan\n1. Nhanh\n2. Binh thuong\n3. Cham\n";
+		cout << "Chon toc do bieu dien thuat toan\n1. Nhanh\n2. Binh thuong\n3. Cham\n";
 		cin >> speed;
 	} while (speed < 1 || speed > 3);
 	do
 	{
 		system("cls");
-		cout << "\n1.Selection Sort\n2.Interchange Sort\n3.Insertion Sort\n4.Binary Insersion Sort\n5.Bubble Sort\n6.Shaker Sort";
+		cout << "Chon thuat toan sap xep:\n1.Selection Sort\n2.Interchange Sort\n3.Insertion Sort\n4.Binary Insersion Sort\n5.Bubble Sort\n6.Shaker Sort";
 		cout << "\n7.Shell Sort\n8.Counting Sort\n9.Radix Sort\n10.Heap Sort\n11.Quick Sort\n12.Merge Sort\n13.Quay lai!\n14.Quay lai menu!\n";
 		cin >> ch;
 		switch (ch)
@@ -282,11 +280,20 @@ void Sort::chose()
 
 void Sort::menu()
 {
+
+	/*for (int i = 0; i < 15; i++)
+	{
+		system("cls");
+		gotoXY(48, 14);
+		cout << "Welcome to the program";
+		Sleep(150);
+	}*/
+
 	int ch;
 	do
 	{
-		system("cls");
-		cout << "\n1.Nhap day so\n2.Chon thuat toan sap xep\n3.Thoat!!\n";
+		system("cls");	
+		wcout << "MENU:\n1.Khoi tao day so\n2.Chon thuat toan sap xep\n3.Thoat!!\n";
 		cin >> ch;
 		switch (ch)
 		{
@@ -295,7 +302,7 @@ void Sort::menu()
 			break;
 		case 2:
 			if (amount == 0) {
-				cout << "Mang rong!!!" << endl;
+				cout << "Day so rong!!!" << endl;
 				system("pause");
 				continue;
 			}

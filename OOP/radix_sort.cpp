@@ -3,7 +3,9 @@
 void Sort::RadixSort()
 {
     int m = getMax();
-    for (int div = 1; m / div > 0; div *= 10) {
+    for (int div = 1; m / div > 0; div *= 10) 
+    {
+        request();
         CountingSort(div);
         output();
     }
@@ -52,6 +54,7 @@ void Sort::RadixSortDE()
     int m = getMax();
     for (int div = 1; m / div > 0; div *= 10)
     {
+        request();
         CountingSortDE(div);
         output();
     }
@@ -63,7 +66,7 @@ void Sort::Radix_Sort()
     do
     {
         system("cls");
-        cout << "\n1.Sap xep tang dan\n2.Sap xep giam dan\n3.Quay lai!\n4.Quay lai menu!\n";
+        cout << "Chon cach sap xep\n1.Sap xep tang dan\n2.Sap xep giam dan\n3.Quay lai!\n4.Quay lai menu!\n";
         cin >> ch;
         switch (ch)
         {

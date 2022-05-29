@@ -68,7 +68,7 @@ void Sort::Quick_Sort()
     do
     {
         system("cls");
-        cout << "\n1.Sap xep tang dan\n2.Sap xep giam dan\n3.Quay lai!\n4.Quay lai menu!\n";
+        cout << "Chon cach sap xep\n1.Sap xep tang dan\n2.Sap xep giam dan\n3.Quay lai!\n4.Quay lai menu!\n";
         cin >> ch;
         switch (ch)
         {
