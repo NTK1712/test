@@ -1,3 +1,0 @@
-D:\GitHub\OOP\OOP\x64\Debug\OOP.exe
-D:\GitHub\OOP(1)\OOP\x64\Debug\OOP.exe
-D:\GitHub\test\test\OOP\x64\Debug\OOP.exe
