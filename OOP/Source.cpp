@@ -72,7 +72,7 @@ void Sort::input_from_file()
 	{
 		cout << "Nhap duong dan file: ";
 		cin >> link;
-		ifstream fileInput(link);
+		ifstream fileInput(link, ios::in);
 		if (fileInput.fail())
 		{
 			cout << "File khong ton tai moi nhap lai!" << endl;
@@ -80,14 +80,12 @@ void Sort::input_from_file()
 		kt = fileInput.fail();
 	} while (kt);
 	ifstream fileInput(link);
-	for (int i = 0; !fileInput.eof(); i++)
-	{
-		fileInput >> A[i];
-		amount++;
-	}
-	fileInput.close();
+	fileInput >> amount;
 	A = new int[amount];
-	for (int i = 0; i< amount-1; i++)
+	for (int i = 0; i < amount; i++)
+		fileInput >> A[i];
+	fileInput.close();
+	for (int i = 0; i< amount; i++)
 	{
 		cout << A[i] << " ";
 	}
