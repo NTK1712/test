@@ -7,7 +7,7 @@ int main()
     Sort S;
     srand(unsigned(time(NULL)));
     S.menu();
-    cout << "Ddnaofmoaemfoiameofm";
+    cout << "124335645373525";
     system("pause");
     return 0;
 }
