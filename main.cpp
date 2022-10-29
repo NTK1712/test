@@ -7,7 +7,6 @@ int main()
     Sort S;
     srand(unsigned(time(NULL)));
     S.menu();
-    cout << "DvKiTe";
     system("pause");
     return 0;
 }
